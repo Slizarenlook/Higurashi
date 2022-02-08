@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://mainPlayer.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist5.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist6.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist1.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "moveRight",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "standRight",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 50.0089, 59.9993 )
+
+[node name="player" type="KinematicBody2D"]
+position = Vector2( 359, 257 )
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "moveRight"
+frame = 2
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -11, 137 )
+scale = Vector2( -7.55235, 2.31029 )
+enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -6.00479, 222.023 )
+rotation = 0.00469255
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
