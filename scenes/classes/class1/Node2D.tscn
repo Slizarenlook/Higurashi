@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/classes/class1/dialogue.gd" type="Script" id=1]
 [ext_resource path="res://scenes/classes/class1/Main.gd" type="Script" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Sprites/StaticSprites/red_arrow_PNG1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/StaticSprites/wallet.png" type="Texture" id=7]
 [ext_resource path="res://scenes/classes/class1/Item.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/SpritesVN/конструктор тянов/face_astonishment.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/SpritesVN/конструктор тянов/eye_patch.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/SpritesVN/конструктор тянов/body_1.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -159,6 +162,19 @@ texture = ExtResource( 7 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Wallet"]
 position = Vector2( 1816.5, 641 )
 shape = SubResource( 5 )
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( 748, 561 )
+scale = Vector2( 0.65, 0.65 )
+
+[node name="Body1" type="Sprite" parent="Node2D2"]
+texture = ExtResource( 11 )
+
+[node name="FaceAstonishment" type="Sprite" parent="Node2D2"]
+texture = ExtResource( 9 )
+
+[node name="EyePatch" type="Sprite" parent="Node2D2"]
+texture = ExtResource( 10 )
 
 [connection signal="timeout" from="Control/TextBox/Timer" to="Control" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Control/Choise1" to="Control" method="_on_Choise1_pressed"]

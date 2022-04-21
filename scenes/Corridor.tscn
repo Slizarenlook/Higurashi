@@ -1,0 +1,286 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Sprites/Backgrounds/Corridor_2block_2floor.png" type="Texture" id=1]
+[ext_resource path="res://scenes/KinematicBody2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://code/FollowCam.gd" type="Script" id=3]
+[ext_resource path="res://code/Npc.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/AnimationSprites/Jenya_idle_animation_list1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/AnimationSprites/Jenya_idle_animation_list2.png" type="Texture" id=6]
+[ext_resource path="res://code/phrases.gd" type="Script" id=7]
+[ext_resource path="res://Sprites/SpritesVN/Женя_обр.png" type="Texture" id=8]
+[ext_resource path="res://code/talks.gd" type="Script" id=9]
+[ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://code/BG.gd" type="Script" id=11]
+[ext_resource path="res://Sprites/StaticSprites/key.png" type="Texture" id=12]
+[ext_resource path="res://code/Key.gd" type="Script" id=13]
+[ext_resource path="res://code/DoorToClass.gd" type="Script" id=14]
+
+[sub_resource type="ImageTexture" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 127.25, 556.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 31.5, 363.25 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "standRight",
+"speed": 3.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 14.0631
+height = 57.9557
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 11.5723, 8.80122 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 60
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 40
+font_data = ExtResource( 10 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 2056.75, 88 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 2114.5, 37.25 )
+
+[sub_resource type="CapsuleShape2D" id=13]
+height = 741.364
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 160.5, 137 )
+
+[node name="scene" type="Node2D"]
+position = Vector2( -4, 0 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 546, 242 )
+z_index = 2
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 2038, 102 )
+z_index = 1
+texture = ExtResource( 1 )
+normal_map = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 501, 300 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
+limit_left = -100000
+script = ExtResource( 3 )
+
+[node name="leftCollision" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 0, -3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftCollision"]
+position = Vector2( 119.75, 46 )
+shape = SubResource( 2 )
+
+[node name="rightCollision" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightCollision"]
+position = Vector2( 3906.5, 310.75 )
+shape = SubResource( 3 )
+
+[node name="Jenya" type="KinematicBody2D" parent="."]
+position = Vector2( 524, 9 )
+z_index = 1
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Jenya"]
+position = Vector2( 1606, 255 )
+frames = SubResource( 4 )
+animation = "standRight"
+
+[node name="Area2D" type="Area2D" parent="Jenya"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jenya/Area2D"]
+position = Vector2( 1600, 269 )
+rotation = 0.0212947
+scale = Vector2( 4.91433, 5.38602 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jenya"]
+position = Vector2( 1598.85, 413.604 )
+rotation = 0.0212947
+scale = Vector2( 4.91433, 5.38602 )
+shape = SubResource( 12 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+margin_left = 318.0
+margin_top = 755.0
+margin_right = 318.0
+margin_bottom = 755.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharSprite" type="Sprite" parent="CanvasLayer/Control"]
+position = Vector2( 120.875, 145.5 )
+scale = Vector2( 0.419627, 0.385333 )
+z_index = 2
+texture = ExtResource( 8 )
+
+[node name="TextBox" type="ColorRect" parent="CanvasLayer/Control"]
+margin_left = 2.00002
+margin_top = 1.0
+margin_right = 1329.0
+margin_bottom = 289.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/TextBox"]
+margin_left = 363.0
+margin_top = 85.0
+margin_right = 1322.0
+margin_bottom = 285.0
+custom_fonts/normal_font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Control/TextBox"]
+wait_time = 0.05
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/TextBox"]
+margin_left = 329.0
+margin_top = 10.0
+margin_right = 758.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choise1" type="Button" parent="CanvasLayer/Control"]
+margin_left = 811.0
+margin_top = -186.0
+margin_right = 1078.0
+margin_bottom = -107.0
+custom_fonts/font = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choise2" type="Button" parent="CanvasLayer/Control"]
+margin_left = 812.0
+margin_top = -92.0
+margin_right = 1079.0
+margin_bottom = -13.0
+custom_fonts/font = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dialogues" type="Node2D" parent="CanvasLayer"]
+position = Vector2( -4, 0 )
+script = ExtResource( 7 )
+
+[node name="f" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 425.0
+margin_top = 626.0
+margin_right = 1105.0
+margin_bottom = 777.0
+custom_fonts/normal_font = SubResource( 11 )
+text = "Нажмите F для взаимодействия"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGcolor" type="ColorRect" parent="."]
+margin_left = -81.0
+margin_top = -650.0
+margin_right = 4237.0
+margin_bottom = 782.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bottomCollision" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 0, -29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottomCollision"]
+position = Vector2( 2041, 725 )
+z_index = 1
+shape = SubResource( 9 )
+
+[node name="topCollision" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topCollision"]
+position = Vector2( 2055, 338 )
+z_index = 1
+shape = SubResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 185, 211 )
+rotation = 1.68803
+scale = Vector2( 0.0255233, 0.0230754 )
+z_index = 1
+script = ExtResource( 13 )
+
+[node name="Key" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 623, 1310 )
+texture = ExtResource( 12 )
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2( 672.092, 1272.43 )
+rotation = 1.43684
+scale = Vector2( 159.843, 26.1117 )
+shape = SubResource( 13 )
+
+[node name="DoorToClass" type="StaticBody2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="Area2D" type="Area2D" parent="DoorToClass"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToClass/Area2D"]
+position = Vector2( 2837.5, 432 )
+shape = SubResource( 14 )
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 2
+
+[node name="BlueDark" type="ColorRect" parent="Node2D"]
+margin_left = 3057.0
+margin_top = -504.0
+margin_right = 4090.0
+margin_bottom = 668.0
+color = Color( 0.25098, 0.211765, 0.529412, 0.215686 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="CanvasLayer/Control/TextBox/Timer" to="CanvasLayer/Control" method="_on_Timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Control/Choise1" to="Jenya" method="_on_Choise1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Choise2" to="Jenya" method="_on_Choise2_pressed"]
