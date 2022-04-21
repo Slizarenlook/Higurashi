@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://code/mainPlayer.gd" type="Script" id=1]
+[ext_resource path="res://code/main/mainPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist2.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist3.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/AnimationSprites/schoolgirl_animationlist4.png" type="Texture" id=4]
