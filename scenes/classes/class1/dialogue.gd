@@ -1,6 +1,6 @@
 extends Node2D
 
-var Interact = [ 
+var Interact = [
 {
 	"Name" : "Катя",
 	"Text": "Ох, привет"
@@ -26,7 +26,6 @@ var Interact = [
 	"Text": "Ну вот теперь знаешь. В любом случае, я потеряла кошелек. Поможешь его найти?",
 	"Choice": ["Да","Да"]
 }
-
 ]
 var afterChoise1 = [
 {

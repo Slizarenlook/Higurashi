@@ -33,6 +33,10 @@ func load_text_and_tex():
 		#	$Char.texture = sad
 		#elif text[counter]["Emotion"] == "Satisfied":
 		#	$Char.texture = happy
+		if text[counter].has("Emotion"):
+			pass
+		if text[counter].has("Comestics"):
+			pass
 		if text[counter].has("End"):
 			get_tree().change_scene("res://Corridor.tscn")
 		if text[counter].has("SearchPhase"):
