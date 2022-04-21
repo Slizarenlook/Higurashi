@@ -2,19 +2,20 @@ extends Control
 
 
 onready var text = get_parent().get_node("dialogue").Interact
-
 #var happy = preload("res://emoHappy.png")
 #var sad = preload("res://emoSad.png")
 var counter = 0
+var scrollcounter = 0
 var position
 var emotion
 var block
-
+var backlog = []
+var hover
 
 var end
 func _process(delta):
 	if end:
-		if Input.is_action_just_released("ui_accept"):
+		if Input.is_action_just_released("ui_select") or (!$backlog.is_hovered() and Input.is_action_just_released("ui_accept")):
 			load_text_and_tex()
 
 
@@ -54,11 +55,15 @@ func load_text_and_tex():
 			$Choise2.visible = false
 			block = false
 		$TextBox/RichTextLabel.text = text[counter]["Text"]
+		if !block:
+			backlog.append({"Name":text[counter]["Name"],"Text":text[counter]["Text"]})
+			$ScrollContainer/Control/RichTextLabel.text += "\n" + backlog[scrollcounter]["Name"] +": "+ backlog[scrollcounter]["Text"]
 		$TextBox/Label.text = text[counter]["Name"]
 		$TextBox/RichTextLabel.visible_characters = 0
 		$TextBox/Timer.start()
 	if !block:
 		counter += 1
+		scrollcounter += 1
 
 func _on_Timer_timeout():
 	if $TextBox/RichTextLabel.visible_characters >= $TextBox/RichTextLabel.get_total_character_count():
@@ -66,6 +71,7 @@ func _on_Timer_timeout():
 		end = true
 	else:
 		$TextBox/RichTextLabel.visible_characters += 1
+
 
 
 func _on_Choise1_pressed():
@@ -79,11 +85,9 @@ func _on_Choise2_pressed():
 	load_text_and_tex()
 
 
-func _on_TextureButton_pressed():
-	if counter > 1:
-		counter -= 2
-		load_text_and_tex()
 
-
-func _on_TextureButton2_pressed():
-	load_text_and_tex()
+func _on_backlog_pressed():
+	if $ScrollContainer.visible == true:
+		$ScrollContainer.visible = false
+	else:
+		$ScrollContainer.visible = true
