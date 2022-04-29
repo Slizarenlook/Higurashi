@@ -42,10 +42,11 @@
         if rcst2.colliding:
             block
         move_and_collide(pos.normilize*delta)
-#5var succesful solution found through direct work with godot
 
-
-
-
-            
-        
+#5var 
+    func _input(event)
+        if pos == position.floor()
+            pos_stop = true
+        else:
+            pos_stop = false
+            pos = position.floor()
