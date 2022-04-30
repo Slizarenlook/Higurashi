@@ -43,10 +43,22 @@
             block
         move_and_collide(pos.normilize*delta)
 
-#5var 
+#5var
+    func checkObjects():
+        match animationPlayer.get_current_animation():
+            "moving_right": facing2 = Vector2(1,0),
+            "moving_left": facing2 = Vector2(-1,0)
+
+        rcst.cast_to = facing2 * interactDistance
+
     func _input(event)
         if pos == position.floor()
             pos_stop = true
         else:
             pos_stop = false
             pos = position.floor()
+    func _process(delta):
+        match facing.x:
+            1: animationPlayer.play("idle_right")
+            -1: animationPlayer.play("idle_left")
+        
