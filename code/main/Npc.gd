@@ -11,7 +11,7 @@ onready var key
 
 func talk():
 	key = get_node("/root/scene/CanvasLayer/dialogues").KeyFound
-	if player.facing.x == 1:
+	if player.facing2.x == 1:
 		animation.flip_h = false
 	else:
 		animation.flip_h = true
