@@ -39,7 +39,7 @@ func load_text_and_tex():
 		if text[counter].has("Comestics"):
 			pass
 		if text[counter].has("End"):
-			get_tree().change_scene("res://Corridor.tscn")
+			get_tree().change_scene("res://scenes/Corridor.tscn")
 		if text[counter].has("SearchPhase"):
 			block = true
 			visible = false
