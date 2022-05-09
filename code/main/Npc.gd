@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var animation = $AnimatedSprite
+onready var animation = $AnimationPlayer
 onready var player = get_node("/root/scene/player")
 onready var collision = $CollisionShape2D
 onready var areaCollision = $Area2D/CollisionShape2D
@@ -11,10 +11,10 @@ onready var key
 
 func talk():
 	key = get_node("/root/scene/CanvasLayer/dialogues").KeyFound
-	if player.facing.x == 1:
-		animation.flip_h = false
+	if player.facing2.x == 1:
+		animation.play("idle_right")
 	else:
-		animation.flip_h = true
+		animation.play("idle_left")
 	dialog.text = get_node("/root/scene/CanvasLayer/dialogues").phrasesJenya
 	player.block = true
 	dialog.ready()
@@ -25,7 +25,6 @@ func talk():
 	else:
 		dialog.get_child(2).disabled = true
 		dialog.get_child(2).modulate = Color(1,1,1,0)
-	
 	
 func react():
 	match exactAction:
@@ -39,8 +38,10 @@ func react():
 				player.block = false
 				dialog.text = get_node("/root/scene/CanvasLayer/dialogues").phrasesJenya
 
+func _ready():
+	animation.play("idle_right")
+	
 func _physics_process(delta):
-	animation.play("standRight")
 	if afterAction:
 		react()
 
