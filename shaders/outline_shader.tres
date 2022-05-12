@@ -1,0 +1,22 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+uniform float width : hint_range(0.0,0.09);
+void fragment() {
+	vec4 outline_color = vec4(1.0,1.0,1.0,1.0);
+	vec4 sprite_color = texture(TEXTURE, UV);
+	float outline = -8.0 * sprite_color.a;
+	outline += texture(TEXTURE, UV + vec2(width,0.0)).a;
+	outline += texture(TEXTURE, UV + vec2(0.0,width)).a;
+	outline += texture(TEXTURE, UV + vec2(-width,0.0)).a;
+	outline += texture(TEXTURE, UV + vec2(0.0,width)).a;
+	outline += texture(TEXTURE, UV + vec2(width,0.0)).a;
+	outline += texture(TEXTURE, UV + vec2(0.0,width)).a;
+	outline += texture(TEXTURE, UV + vec2(-width,0.0)).a;
+	outline += texture(TEXTURE, UV + vec2(0.0,width)).a;
+	
+	
+	vec4 fin_color = mix(sprite_color, outline_color, outline);
+	COLOR = vec4(fin_color.rgb, clamp(abs(outline) + sprite_color.a, 0.0, 1.0));
+} "
