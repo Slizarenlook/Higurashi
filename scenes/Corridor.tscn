@@ -15,7 +15,7 @@
 [ext_resource path="res://code/main/DoorToClass.gd" type="Script" id=14]
 [ext_resource path="res://Sprites/Backgrounds/Corridor_2block_2floor (2).png" type="Texture" id=15]
 [ext_resource path="res://shaders/outline_shader.tres" type="Shader" id=18]
-[ext_resource path="res://scenes/Crop.gd" type="Script" id=19]
+[ext_resource path="res://code/main/Crop.gd" type="Script" id=19]
 
 [sub_resource type="DynamicFont" id=6]
 size = 60
