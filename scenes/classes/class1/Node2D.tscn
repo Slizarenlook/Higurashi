@@ -7,9 +7,9 @@
 [ext_resource path="res://Sprites/Backgrounds/Класс_утро.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/SpritesVN/Катя.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/StaticSprites/wallet.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/SpritesVN/конструктор тянов/face_astonishment.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/SpritesVN/конструктор тянов/eye_patch.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/SpritesVN/конструктор тянов/body_1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/SpritesVN/construct/Женя/body_1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/SpritesVN/construct/Женя/eye_patch.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/SpritesVN/construct/Женя/face_astonishment.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -121,10 +121,24 @@ __meta__ = {
 }
 
 [node name="Char" type="Sprite" parent="Control"]
-position = Vector2( 1013.33, 766.667 )
+position = Vector2( 1013.33, 690 )
 scale = Vector2( 1.5, 1.5 )
 z_index = -1
 texture = ExtResource( 6 )
+
+[node name="Женя" type="Node2D" parent="Control"]
+position = Vector2( 2133.33, 416.667 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = -1
+
+[node name="Body1" type="Sprite" parent="Control/Женя"]
+texture = ExtResource( 8 )
+
+[node name="Face" type="Sprite" parent="Control/Женя"]
+texture = ExtResource( 10 )
+
+[node name="EyePatch" type="Sprite" parent="Control/Женя"]
+texture = ExtResource( 9 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control"]
 visible = false
@@ -174,7 +188,7 @@ __meta__ = {
 }
 
 [node name="BG" type="Sprite" parent="."]
-position = Vector2( 958, 541.5 )
+position = Vector2( 958, 539 )
 scale = Vector2( 1.50156, 1.49861 )
 z_index = -2
 texture = ExtResource( 5 )
@@ -194,20 +208,6 @@ texture = ExtResource( 7 )
 visible = false
 position = Vector2( 1816.5, 641 )
 shape = SubResource( 5 )
-
-[node name="Node2D2" type="Node2D" parent="."]
-visible = false
-position = Vector2( 748, 561 )
-scale = Vector2( 0.65, 0.65 )
-
-[node name="Body1" type="Sprite" parent="Node2D2"]
-texture = ExtResource( 10 )
-
-[node name="FaceAstonishment" type="Sprite" parent="Node2D2"]
-texture = ExtResource( 8 )
-
-[node name="EyePatch" type="Sprite" parent="Node2D2"]
-texture = ExtResource( 9 )
 
 [connection signal="timeout" from="Control/TextBox/Timer" to="Control" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Control/Choise1" to="Control" method="_on_Choise1_pressed"]

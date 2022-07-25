@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/face_smile.png-3467189e581ee47b19399d4bd1d3c878.stex"
+path="res://.import/light.png-87e5d74b61a1c0ebfa0a964f833a188e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SpritesVN/конструктор тянов/face_smile.png"
-dest_files=[ "res://.import/face_smile.png-3467189e581ee47b19399d4bd1d3c878.stex" ]
+source_file="res://Sprites/StaticSprites/light.png"
+dest_files=[ "res://.import/light.png-87e5d74b61a1c0ebfa0a964f833a188e.stex" ]
 
 [params]
 

@@ -35,9 +35,21 @@ func load_text_and_tex():
 		#elif text[counter]["Emotion"] == "Satisfied":
 		#	$Char.texture = happy
 		if text[counter].has("Emotion"):
-			pass
-		if text[counter].has("Comestics"):
-			pass
+			var fp = text[counter]["Name"] + "/"
+			var res = str(text[counter]["Emotion"]).find("face")
+			if res != -1:
+				res += 5
+				var st = str(text[counter]["Emotion"]).substr(res,-1)
+				if st.find(",") != -1:
+					st = st.substr(0,st.find(","))
+				else:
+					st = st.substr(0,st.find("]"))
+				var filepath = "res://Sprites/SpritesVN/construct/" + text[counter]["Name"] + "/face_" + st + ".png"
+				get_node(fp + "Face").texture = load(filepath)
+			if text[counter]["Emotion"].has("EyePatch off"):
+				get_node(fp + "EyePatch").visible = false
+			elif text[counter]["Emotion"].has("EyePatch on"):
+				get_node(fp + "EyePatch").visible = true
 		if text[counter].has("End"):
 			get_tree().change_scene("res://scenes/Corridor.tscn")
 		if text[counter].has("SearchPhase"):

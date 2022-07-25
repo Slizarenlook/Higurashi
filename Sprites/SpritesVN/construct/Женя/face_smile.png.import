@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/face_astonishment.png-074e1b85cc5854d86a27492d2a9667d9.stex"
+path="res://.import/face_smile.png-7b081dfff7f52fb12526c8f8d11af548.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SpritesVN/конструктор тянов/face_astonishment.png"
-dest_files=[ "res://.import/face_astonishment.png-074e1b85cc5854d86a27492d2a9667d9.stex" ]
+source_file="res://Sprites/SpritesVN/construct/Женя/face_smile.png"
+dest_files=[ "res://.import/face_smile.png-7b081dfff7f52fb12526c8f8d11af548.stex" ]
 
 [params]
 

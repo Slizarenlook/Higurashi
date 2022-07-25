@@ -20,11 +20,11 @@ func talk():
 	dialog.ready()
 	afterAction = false
 	if key:
-		dialog.get_child(2).modulate = Color(1,1,1,1)
-		dialog.get_child(2).disabled = false
+		dialog.get_child(1).modulate = Color(1,1,1,1)
+		dialog.get_child(1).disabled = false
 	else:
-		dialog.get_child(2).disabled = true
-		dialog.get_child(2).modulate = Color(1,1,1,0)
+		dialog.get_child(1).disabled = true
+		dialog.get_child(1).modulate = Color(1,1,1,0)
 	
 func react():
 	match exactAction:

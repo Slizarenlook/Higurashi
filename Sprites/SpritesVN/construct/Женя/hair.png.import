@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eye_patch.png-aae7fb567938bac719a81e368248859c.stex"
+path="res://.import/hair.png-a4b35fba27b9bf5bd49b1ccf19d5e419.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SpritesVN/конструктор тянов/eye_patch.png"
-dest_files=[ "res://.import/eye_patch.png-aae7fb567938bac719a81e368248859c.stex" ]
+source_file="res://Sprites/SpritesVN/construct/Женя/hair.png"
+dest_files=[ "res://.import/hair.png-a4b35fba27b9bf5bd49b1ccf19d5e419.stex" ]
 
 [params]
 
