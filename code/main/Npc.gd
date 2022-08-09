@@ -7,6 +7,9 @@ onready var areaCollision = $Area2D/CollisionShape2D
 onready var dialog = get_node("/root/scene/CanvasLayer/Control")
 var afterAction = false
 var exactAction = 0
+var pos = Vector2()
+var facing = Vector2()
+var move = false
 onready var key
 
 func talk():
@@ -25,7 +28,24 @@ func talk():
 	else:
 		dialog.get_child(1).disabled = true
 		dialog.get_child(1).modulate = Color(1,1,1,0)
-	
+		
+func go():
+	pos = Vector2($Position.position.x,$Position.position.y)
+	if position.x > pos.x:
+		facing.x = -1
+		move_and_slide(facing*300)
+		if position.x < pos.x:
+			print("stop")
+			facing = Vector2.ZERO
+			move = false
+	elif position.x < pos.x:
+		facing.x = 1
+		move_and_slide(facing*300)
+		if position.x > pos.x:
+			print("stop")
+			facing = Vector2.ZERO
+			move = false
+
 func react():
 	match exactAction:
 		1:
@@ -33,6 +53,7 @@ func react():
 				player.block = false
 				collision.disabled = true
 				areaCollision.disabled = true
+				go()
 		2:
 			if dialog.try_end_talk():
 				player.block = false
@@ -44,6 +65,7 @@ func _ready():
 func _physics_process(delta):
 	if afterAction:
 		react()
+
 
 func _on_Choise1_pressed():
 	dialog.text = get_node("/root/scene/CanvasLayer/dialogues").JenyaafterchoiseY

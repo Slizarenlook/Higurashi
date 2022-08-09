@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # переменные 
-var speed = 500 #скорость передвижения персонажа
+var speed = 400 #скорость передвижения персонажа
 var interactDistance = 40 #расстояние на котором персонаж сможет взаимодейстовать с объектами
 onready var rcst = $RayCast2D #переменная/объект для работы с элементом Raycast нужным для взаимодействия с коллизиями
 onready var animation = $AnimatedSprite #переменная/объект для работы с анимацией

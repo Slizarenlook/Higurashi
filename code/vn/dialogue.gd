@@ -21,11 +21,14 @@ var Interact = [
 {
 	"Name" : "Женя",
 	"Text": "Ладно, шучу",
-	"Emotion": ["EyePatch on", "face astonishment"]
 },
 {
 	"Name" : "ГГтян",
 	"Text": "Угу, она зачем-то про ключ говорила. Что это за ключ?"
+},
+{
+	"Name" : "Женя",
+	"Text": "Ладно, шучу",
 },
 {
 	"Name" : "Катя",
