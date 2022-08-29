@@ -1,9 +1,9 @@
 extends StaticBody2D
 
-onready var box  = get_node("/root/scene/Control")
-var foundCount = 0
+onready var box = get_node("/root/scene/Control")
+onready var foundCount = 0
 onready var elements = get_parent().get_child_count()
-var hover
+onready var hover
 func _ready(): 
 	connect("mouse_entered", self, "_on_mouse_entered")
 	connect("mouse_exited",self,"_on_mouse_exited")
@@ -17,6 +17,6 @@ func _input(event):
 		if foundCount == elements:
 			box.mouse_filter = 0
 			visible = false
-			box.block = false
 			box.visible = true
 			box.load_text_and_tex()
+			box.block = false

@@ -31,12 +31,14 @@ func talk():
 		
 func go():
 	pos = Vector2($Position.position.x,$Position.position.y)
+	var speed = 300
 	if position.x > pos.x:
 		facing.x = -1
-		move_and_slide(facing*300)
+		move_and_slide(facing*speed)
 		if position.x < pos.x:
 			print("stop")
 			facing = Vector2.ZERO
+			speed = 0
 			move = false
 	elif position.x < pos.x:
 		facing.x = 1
@@ -45,6 +47,7 @@ func go():
 			print("stop")
 			facing = Vector2.ZERO
 			move = false
+			speed = 0
 
 func react():
 	match exactAction:

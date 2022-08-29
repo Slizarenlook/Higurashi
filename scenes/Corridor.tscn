@@ -119,7 +119,6 @@ position = Vector2( -4, 0 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
-visible = false
 margin_left = 479.0
 margin_top = 866.0
 margin_right = 479.0

@@ -2,6 +2,8 @@ extends Control
 
 
 onready var text = get_parent().get_node("dialogue").Interact
+onready var option_list = get_parent().get_node("option_list")
+onready var option_button = load("res://scenes/Option.tscn")
 #var happy = preload("res://emoHappy.png")
 #var sad = preload("res://emoSad.png")
 var counter = 0
@@ -25,6 +27,7 @@ func _ready():
 func load_text_and_tex():
 	#print(counter)
 	if counter < text.size():
+		
 		end = false
 		#if text[counter]["Position"] == "left":
 		#	$Alice.global_position = get_node("left").position
@@ -57,15 +60,10 @@ func load_text_and_tex():
 			visible = false
 			mouse_filter = 2
 		if text[counter].has("Choice"):
-			$Choise1.visible = true
-			$Choise2.visible = true
-			$Choise1.text = text[counter]["Choice"][0]
-			$Choise2.text = text[counter]["Choice"][1]
+			option_list.visible = true
+			if !block:
+				populate_choises(text[counter]["Choice"],text[counter]["Slot"])
 			block = true
-		else:
-			$Choise1.visible = false
-			$Choise2.visible = false
-			block = false
 		$TextBox/RichTextLabel.text = text[counter]["Text"]
 		if !block:
 			backlog.append({"Name":text[counter]["Name"],"Text":text[counter]["Text"]})
@@ -83,20 +81,43 @@ func _on_Timer_timeout():
 		end = true
 	else:
 		$TextBox/RichTextLabel.visible_characters += 1
-
-
-
-func _on_Choise1_pressed():
-	text = get_parent().get_node("dialogue").afterChoise2
+		
+func clear_options():
+	var children = option_list.get_children()
+	for child in children:
+		child.disconnect("clicked",self,"_on_Option_Button_Clicked")
+		option_list.remove_child(child)
+		child.queue_free()
+		
+		
+func _on_Option_Button_Clicked(slot):
+	var array = get_parent().get_node("dialogue")
+	text = array.get(slot)
+	clear_options()
+	option_list.visible = false
 	counter = 0
+	block = false
 	load_text_and_tex()
+	
+func populate_choises(element, slots):
+	for index in slots.size():
+		var new_button = option_button.instance()
+		option_list.add_child(new_button)
+		new_button.set_text(element[index])
+		new_button.slot = slots[index] 
+		new_button.set_text(element[index])
+		new_button.connect("clicked",self,"_on_Option_Button_Clicked")
+		
 
-func _on_Choise2_pressed():
-	text = get_parent().get_node("dialogue").afterChoise1
-	counter = 0
-	load_text_and_tex()
+#func _on_Choise1_pressed():
+#	text = get_parent().get_node("dialogue").afterChoise2
+#	counter = 0
+#	load_text_and_tex()
 
-
+#func _on_Choise2_pressed():
+#	text = get_parent().get_node("dialogue").afterChoise1
+#	counter = 0
+#	load_text_and_tex()
 
 func _on_backlog_pressed():
 	if $ScrollContainer.visible == true:

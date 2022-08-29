@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://code/vn/dialogue.gd" type="Script" id=1]
 [ext_resource path="res://code/vn/Main.gd" type="Script" id=2]
@@ -18,14 +18,6 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 75
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 100
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 100
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=7]
@@ -98,28 +90,6 @@ scale = Vector2( 3.33333, 3.33333 )
 position = Vector2( 2160, -433.333 )
 scale = Vector2( 3.33333, 3.33333 )
 
-[node name="Choise1" type="Button" parent="Control"]
-margin_left = 3250.0
-margin_top = 326.667
-margin_right = 4150.0
-margin_bottom = 626.667
-custom_fonts/font = SubResource( 3 )
-text = "Choise1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Choise2" type="Button" parent="Control"]
-margin_left = 3250.0
-margin_top = 706.667
-margin_right = 4150.0
-margin_bottom = 1006.67
-custom_fonts/font = SubResource( 4 )
-text = "Choise2"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Char" type="Sprite" parent="Control"]
 position = Vector2( 1013.33, 690 )
 scale = Vector2( 1.5, 1.5 )
@@ -190,7 +160,8 @@ __meta__ = {
 [node name="BG" type="Sprite" parent="."]
 position = Vector2( 958, 539 )
 scale = Vector2( 1.50156, 1.49861 )
-z_index = -2
+z_index = -10
+z_as_relative = false
 texture = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -209,7 +180,17 @@ visible = false
 position = Vector2( 1816.5, 641 )
 shape = SubResource( 5 )
 
+[node name="option_list" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 1249.0
+margin_top = 720.0
+margin_right = 1789.0
+margin_bottom = 768.0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="timeout" from="Control/TextBox/Timer" to="Control" method="_on_Timer_timeout"]
-[connection signal="pressed" from="Control/Choise1" to="Control" method="_on_Choise1_pressed"]
-[connection signal="pressed" from="Control/Choise2" to="Control" method="_on_Choise2_pressed"]
 [connection signal="pressed" from="Control/backlog" to="Control" method="_on_backlog_pressed"]
