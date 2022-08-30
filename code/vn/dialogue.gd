@@ -16,7 +16,7 @@ var Interact = [
 {
 	"Name" : "Женя",
 	"Text": "Ну как?",
-	"Emotion": ["EyePatch off", "face smile"]
+	"Emotion": ["EyePatch off", "face smile","hair simple"]
 },
 {
 	"Name" : "Женя",
@@ -52,22 +52,21 @@ var afterChoise1 = [
 },
 {
 	"Name" : "Катя",
-	"Text": "Начинаем поиски"
+	"Text": "Отлично"
+},
+{
+	"Name" : "",
+	"Text": "",
+	"SearchPhase": ""
 },
 {
 	"Name" : "Катя",
-	"Text": "Херовый из тебя помошник",
-	"SearchPhase": "",
-},
-{
-	"Name" : "Катя",
-	"Text": "Пасиба!",
-	"SearchPhase": "",
+	"Text": "Пасиба!"
 },
 {
 	"Name": "",
 	"Text": "",
-	"End": ""
+	"End": "res://scenes/Corridor.tscn"
 }
 ]
 
@@ -87,7 +86,7 @@ var afterChoise2 = [
 {
 	"Name": "",
 	"Text": "",
-	"End": ""
+	"End": "res://scenes/Corridor.tscn"
 }
 ]
 
