@@ -60,6 +60,9 @@ func _input(event):
 	if (event is InputEventMouseButton and is_visible_in_tree() and event.button_index == BUTTON_LEFT):
 		if (_mouse_exited and _is_drag_receiving):
 			cancel_drop()
+	if (event is InputEventKey and event.scancode == 16777218 and event.is_pressed()):
+		#print("yay")
+		timeline_editor.key_drop()
 
 
 func _on_gui_input(event):

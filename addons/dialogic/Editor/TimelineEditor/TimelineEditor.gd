@@ -766,6 +766,15 @@ func create_drag_and_drop_event(event_id: String):
 	select_item(piece)
 	return piece
 
+func key_drop():
+	var peace1 = create_event('dialogic_001')
+	var at_index = peace1.get_index()
+	TimelineUndoRedo.create_action("[D] Add event.")
+	#TimelineUndoRedo.add_do_method(self, "create_event", currently_draged_event_type, {'no-data': true}, true, at_index, true)
+	TimelineUndoRedo.add_undo_method(self, "remove_events_at_index", at_index, 1)
+	TimelineUndoRedo.commit_action()
+	indent_events()
+	add_extra_scroll_area_to_timeline()
 
 func drop_event():
 	if moving_piece != null:
