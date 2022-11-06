@@ -18,6 +18,7 @@ var saved_style : StyleBoxFlat
 var selected_items : Array = []
 
 var event_scenes : Dictionary = {}
+var prev_prev_event = {'character':'', 'event_id':'dialogic_001', 'portrait':'', 'text':''}
 
 var currently_draged_event_type = null
 var move_start_position = null
@@ -769,8 +770,16 @@ func create_drag_and_drop_event(event_id: String):
 func key_drop():
 	var peace1 = create_event('dialogic_001')
 	var at_index = peace1.get_index()
+	var prev_event = timeline.get_child(at_index - 1).get_body().get_data()
+	if prev_event['event_id'] == 'dialogic_001':
+		peace1.get_body().load_data({'character':prev_event['character'], 'event_id':'dialogic_001', 'portrait':'', 'text':''})
+		prev_prev_event = prev_event
+	else:
+		peace1.get_body().load_data({'character':prev_prev_event['character'], 'event_id':'dialogic_001', 'portrait':'', 'text':''})
+	#print(peace1.get_body().get_data())
+	#print(at_index)
 	TimelineUndoRedo.create_action("[D] Add event.")
-	#TimelineUndoRedo.add_do_method(self, "create_event", currently_draged_event_type, {'no-data': true}, true, at_index, true)
+	#TimelineUndoRedo.add_do_method(self, "create_event", 'dialogic_001', {'no-data': true}, true, at_index, true)
 	TimelineUndoRedo.add_undo_method(self, "remove_events_at_index", at_index, 1)
 	TimelineUndoRedo.commit_action()
 	indent_events()

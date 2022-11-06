@@ -8,6 +8,7 @@ onready var elements = self.get_children()
 signal end_of_phase()
 
 func begin_of_phase_handler():
+	print("elements enabled")
 	for element in elements:
 		element.disabled = false
 

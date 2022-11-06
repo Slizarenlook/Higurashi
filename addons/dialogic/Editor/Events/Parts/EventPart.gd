@@ -40,6 +40,9 @@ func get_preview_text():
 func focus():
 	pass
 
+func get_data():
+	return event_data
+
 # has to be called everytime the data got changed
 func data_changed():
 	emit_signal("data_changed", event_data)

@@ -59,6 +59,8 @@ func visual_deselect():
 	if selected_style:
 		selected_style.hide()
 
+func get_data():
+	return event_data
 
 # called by the timeline before adding it to the tree
 func load_data(data):

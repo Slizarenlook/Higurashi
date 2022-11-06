@@ -35,6 +35,7 @@ font_data = ExtResource( 4 )
 script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]
+visible = false
 show_behind_parent = true
 margin_left = 108.0
 margin_top = 436.0
@@ -90,12 +91,14 @@ position = Vector2( 2160, -433.333 )
 scale = Vector2( 3.33333, 3.33333 )
 
 [node name="Char" type="Sprite" parent="Control"]
+visible = false
 position = Vector2( 1013.33, 690 )
 scale = Vector2( 1.5, 1.5 )
 z_index = -1
 texture = ExtResource( 5 )
 
 [node name="Женя" type="Node2D" parent="Control"]
+visible = false
 position = Vector2( 2145.33, 416.667 )
 scale = Vector2( 2.16667, 2.16667 )
 z_index = -1
@@ -179,9 +182,6 @@ margin_bottom = 1044.0
 rect_scale = Vector2( 0.2, 0.2 )
 texture_normal = ExtResource( 6 )
 script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="option_list" type="VBoxContainer" parent="."]
 anchor_left = 1.0
@@ -191,9 +191,6 @@ margin_top = 720.0
 margin_right = 1789.0
 margin_bottom = 768.0
 grow_vertical = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="timeout" from="Control/TextBox/Timer" to="Control" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Control/backlog" to="Control" method="_on_backlog_pressed"]
