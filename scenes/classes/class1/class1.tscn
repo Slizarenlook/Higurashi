@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://code/vn/dialogue.gd" type="Script" id=1]
 [ext_resource path="res://code/vn/Item_Finder.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Sprites/SpritesVN/construct/Женя/face_astonishment.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Backgrounds/Класс_утро.png" type="Texture" id=10]
 [ext_resource path="res://code/vn/Item.gd" type="Script" id=11]
+[ext_resource path="res://shaders/outline_shader.tres" type="Shader" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -28,6 +29,10 @@ font_data = ExtResource( 4 )
 [sub_resource type="DynamicFont" id=6]
 size = 100
 font_data = ExtResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 12 )
+shader_param/width = 0.018
 
 [node name="scene" type="Node2D"]
 
@@ -175,6 +180,8 @@ input_pickable = true
 script = ExtResource( 2 )
 
 [node name="wallet" type="TextureButton" parent="Items"]
+material = SubResource( 8 )
+use_parent_material = true
 margin_left = 1099.0
 margin_top = 532.0
 margin_right = 1611.0

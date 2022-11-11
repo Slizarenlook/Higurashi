@@ -31,6 +31,19 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "это тест новой системы\t"
+		},
+		{
+			"emit_signal": "search_phase",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "higu_0001"
+		},
+		{
+			"character": "character-1667358064.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ddd"
 		}
 	],
 	"metadata": {
