@@ -81,7 +81,6 @@ _global_script_class_icons={
 [application]
 
 config/name="Higurashi"
-run/main_scene="res://scenes/Corridor.tscn"
 config/icon="res://icon.png"
 
 [display]

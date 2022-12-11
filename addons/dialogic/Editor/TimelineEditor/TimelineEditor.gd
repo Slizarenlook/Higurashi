@@ -765,6 +765,7 @@ func create_drag_and_drop_event(event_id: String):
 	piece_was_dragged = true
 	set_event_ignore_save(piece, true)
 	select_item(piece)
+	print(piece.get_data())
 	return piece
 
 func key_drop():

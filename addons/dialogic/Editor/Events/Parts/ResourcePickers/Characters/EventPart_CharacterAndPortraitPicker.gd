@@ -7,7 +7,7 @@ onready var character_picker = $HBox/CharacterPicker
 onready var portrait_picker = $HBox/PortraitPicker
 onready var definition_picker = $HBox/DefinitionPicker
 
-# used to connect the signals
+# used to connect the signals 
 func _ready():
 	if DialogicUtil.get_character_list().size() == 0:
 		hide()

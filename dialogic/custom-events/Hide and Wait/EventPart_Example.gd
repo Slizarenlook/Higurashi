@@ -5,7 +5,7 @@ extends "res://addons/dialogic/Editor/Events/Parts/EventPart.gd"
  ## node references
  # e.g. 
 onready var input_field = $InputField
-
+onready var animation_picker = $Animation/AnimationPicker
  # used to connect the signals
 func _ready():
 	# e.g. 
@@ -20,7 +20,8 @@ func load_data(data:Dictionary):
 	# Now update the ui nodes to display the data. 
 	# e.g. 
 	input_field.text = event_data['my_text_key']
-
+func add_animation(data):
+	event_data['animation'] = '[Default]'
  # has to return the wanted preview, only useful for body parts
 func get_preview():
 	return ''
