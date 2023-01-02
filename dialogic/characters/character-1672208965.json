@@ -1,0 +1,57 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "Кристина",
+	"display_name_bool": true,
+	"id": "character-1672208965.json",
+	"mirror_portraits": false,
+	"name": "Kris",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Sprites/Characters/Kris/Kris.png"
+		},
+		{
+			"name": "Kris_anger",
+			"path": "res://Sprites/Characters/Kris/Kris_anger.png"
+		},
+		{
+			"name": "Kris_anger2",
+			"path": "res://Sprites/Characters/Kris/Kris_anger2.png"
+		},
+		{
+			"name": "Kris_brush",
+			"path": "res://Sprites/Characters/Kris/Kris_brush.png"
+		},
+		{
+			"name": "Kris_brush2",
+			"path": "res://Sprites/Characters/Kris/Kris_brush2.png"
+		},
+		{
+			"name": "Kris_confused",
+			"path": "res://Sprites/Characters/Kris/Kris_confused.png"
+		},
+		{
+			"name": "Kris_confused2",
+			"path": "res://Sprites/Characters/Kris/Kris_confused2.png"
+		},
+		{
+			"name": "Kris_depressed",
+			"path": "res://Sprites/Characters/Kris/Kris_depressed.png"
+		},
+		{
+			"name": "Kris_evilsmile",
+			"path": "res://Sprites/Characters/Kris/Kris_evilsmile.png"
+		},
+		{
+			"name": "Kris_surprise",
+			"path": "res://Sprites/Characters/Kris/Kris_surprise.png"
+		}
+	],
+	"scale": 60,
+	"theme": ""
+}

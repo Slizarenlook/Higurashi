@@ -1,0 +1,439 @@
+{
+	"events": [
+		{
+			"background": "res://Sprites/Backgrounds/Station.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Серое осеннее утро. Ветер проносится вдоль железных путей.\nРазношёрстная толпа ожидает прибытия маршрутки.\nСреди них и мы с сестрой."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Sonya_depressed",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": true,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Что-то он долго."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Andrey_withBag",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Приехали рано. Ещё минут 20 ждать."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "..."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_brush",
+			"text": "А Кристина придёт?"
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_brush",
+			"text": "Кристина…? Да нет, наверно… Своим ходом может…"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "....."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_surpise",
+			"text": "Хм, а это не она там стоит?"
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_surprise",
+			"text": "Что? Где??"
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_happy",
+			"text": "Вон там! Кристина-а?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Девушка оборачивается и мы оба узнаём ее лицо."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_position": true,
+			"change_z_index": false,
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "(Don't change)",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_position": true,
+			"change_z_index": false,
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "(Don't change)",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_smile",
+			"text": "И давно ты здесь?"
+		},
+		{
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Да только пришла."
+		},
+		{
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_001",
+			"portrait": "Kris_anger",
+			"text": "Все собрали, надеюсь? Документы не забыл?"
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_depressed_withBag",
+			"text": "Не, всё точно взял."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_annoyed",
+			"text": "У него мама проверяла всё. Сам бы точно всё дома оставил.\t"
+		},
+		{
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_001",
+			"portrait": "Kris_evilsmile",
+			"text": "\tАхах, почему я не удивлена…"
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_brush",
+			"text": "\tЭй, ты зачем все ей рассказываешь?! Разве мы не должны быть на одной стороне?"
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_brush",
+			"text": "\tПрости, с Кристей мы больше друзья!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ещё сильнее прижалась к своей новой подруге Соня."
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_withBag",
+			"text": "\tДожили..."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Где-то вдалеке слышен гудок поезда."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_surpise",
+			"text": "О, наш вроде подъезжает."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Люди потихоньку берут свои чемоданы и подходят ближе к путям."
+		},
+		{
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Да не трясись ты так, Сычёв. Что, сумка великовата? А-ха-ха.\t"
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_surpise",
+			"text": "Тяжело, да? Давай я возьму. "
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_surprise",
+			"text": "Э!? Н-нет! Всё нормально"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Действительно, нашу с сестрой сумку я еле держу. Не то чтобы там было много вещей… просто я сейчас не в лучшей форме.\nЭлектричка остановилась, мы вошли в салон и сели рядом."
+		},
+		{
+			"background": "res://Sprites/Backgrounds/Elektrichka.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_depressed",
+			"text": "\tЭх, старое всё такое."
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_withBag",
+			"text": "\tТы чего-то другого ожидала? "
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_depressed",
+			"text": "\tЯ думала хотя бы сиденья поменяют. \n\tВ новостях говорили."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Никогда бы не подумал, что моя сестра следит за новостями. \nКак не зайду к ней в комнату - та лежит на кровати и смотрит развлекательные видео в своём телефоне.\n"
+		},
+		{
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "\tДа ладно уж... ехать всего ничего"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Соня тяжело вздохнула."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_happy",
+			"text": "\tА слышали, из Москвы в Санкт-Петербург поезд скоростной сделали. Люди за несколько часов всего доезжают."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_depressed",
+			"text": "Круто же?\nПочему у нас такой не поставят?"
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "..."
+		},
+		{
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Плотность населения не та, что нужно.\t"
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_depressed",
+			"text": "Эх… а у нас такая будет когда-нибудь?\t"
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_smile_withBag",
+			"text": "У нас, то...? Хех..."
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_evilsmile_withBag",
+			"text": "Ну если Енотова сильно постарается..."
+		},
+		{
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_001",
+			"portrait": "Kris_confused2",
+			"text": "Чего-о?"
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_happy",
+			"text": "Ого! Кристин, я на тебя расчитываю."
+		},
+		{
+			"character": "character-1672208965.json",
+			"event_id": "dialogic_001",
+			"portrait": "Kris_anger2",
+			"text": "Зато ты хоть старайся, хоть не старайся…"
+		},
+		{
+			"character": "character-1672204834.json",
+			"event_id": "dialogic_001",
+			"portrait": "Andrey_brush",
+			"text": "Да что ты знаешь!"
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sonya_surpise",
+			"text": "Соня недоумённо на меня посмотрела."
+		},
+		{
+			"character": "character-1672208989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ничего там вроде не написано. Вы о чём..? "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Хотел было поспорить. Но, что толку доказывать обратное невежде? Только нелепее выглядеть буду.\nЯ достал из кармана наушники, включил музыку и уставился на пролетающий мимо город.\t"
+		},
+		{
+			"background": "",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Проезжая через мост, нашему взору открылся живописный вид на Енисей.\nВсё реже стали видны многоэтажки, их постепенно заменили природные пейзажи со старыми деревянными домиками.\nСидящая впереди меня Соня то и дело крутила головой в разных направлениях, с интересом всё рассматривая.\nОднако и ей скоро это наскучило. Соня принялась усердно забрасывать Кристину разными вопросами.\t"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Прокручивая в голове цели поездки, мне вспомнилось злополучное собрание в ВУЗе."
+		},
+		{
+			"background": "",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\tПедагогический институт ***. Идёт классный час.\t"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Итак, практика будет включать в себя месяц работы в общеобразовательном учреждении, под чутким присмотром куратора.\t"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1672205365.json",
+		"name": "0 day"
+	}
+}

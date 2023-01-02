@@ -1,0 +1,45 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "Соня",
+	"display_name_bool": true,
+	"id": "character-1672208989.json",
+	"mirror_portraits": false,
+	"name": "Sonya",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		},
+		{
+			"name": "Sonya_annoyed",
+			"path": "res://Sprites/Characters/Sonya/Sonya_annoyed.png"
+		},
+		{
+			"name": "Sonya_brush",
+			"path": "res://Sprites/Characters/Sonya/Sonya_brush.png"
+		},
+		{
+			"name": "Sonya_depressed",
+			"path": "res://Sprites/Characters/Sonya/Sonya_depressed.png"
+		},
+		{
+			"name": "Sonya_evilsmile",
+			"path": "res://Sprites/Characters/Sonya/Sonya_evilsmile.png"
+		},
+		{
+			"name": "Sonya_happy",
+			"path": "res://Sprites/Characters/Sonya/Sonya_happy.png"
+		},
+		{
+			"name": "Sonya_surpise",
+			"path": "res://Sprites/Characters/Sonya/Sonya_surpise.png"
+		}
+	],
+	"scale": 60,
+	"theme": ""
+}

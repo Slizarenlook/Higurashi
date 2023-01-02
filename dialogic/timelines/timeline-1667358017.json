@@ -1,0 +1,73 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667358064.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667358064.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ку\t"
+		},
+		{
+			"character": "character-1667358064.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "это тест новой системы\t"
+		},
+		{
+			"emit_signal": "search_phase",
+			"event_id": "dialogic_040"
+		},
+		{
+			"animation": "[Default]",
+			"event_id": "higu_0001"
+		},
+		{
+			"character": "character-1667358064.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ddd"
+		},
+		{
+			"character": "character-1667358064.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\tIndustrial Society and Its Future, generally referred to as the Unabomber Manifesto, is a 35,000-word essay by Ted "
+		},
+		{
+			"character": "character-1667358064.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\tfgfdg"
+		},
+		{
+			"character": "character-1667358064.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\tggfgh"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1667358017.json",
+		"name": "class"
+	}
+}

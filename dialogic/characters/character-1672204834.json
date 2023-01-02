@@ -1,0 +1,57 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "Андрей",
+	"display_name_bool": true,
+	"id": "character-1672204834.json",
+	"mirror_portraits": false,
+	"name": "Andrey",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Sprites/Characters/Andrey/Andrey.png"
+		},
+		{
+			"name": "Andrey_brush",
+			"path": "res://Sprites/Characters/Andrey/Andrey_brush.png"
+		},
+		{
+			"name": "Andrey_depressed",
+			"path": "res://Sprites/Characters/Andrey/Andrey_depressed.png"
+		},
+		{
+			"name": "Andrey_depressed_withBag",
+			"path": "res://Sprites/Characters/Andrey/Andrey_depressed_withBag.png"
+		},
+		{
+			"name": "Andrey_evilsmile",
+			"path": "res://Sprites/Characters/Andrey/Andrey_evilsmile.png"
+		},
+		{
+			"name": "Andrey_evilsmile_withBag",
+			"path": "res://Sprites/Characters/Andrey/Andrey_evilsmile_withBag.png"
+		},
+		{
+			"name": "Andrey_smile",
+			"path": "res://Sprites/Characters/Andrey/Andrey_smile.png"
+		},
+		{
+			"name": "Andrey_smile_withBag",
+			"path": "res://Sprites/Characters/Andrey/Andrey_smile_withBag.png"
+		},
+		{
+			"name": "Andrey_surprise",
+			"path": "res://Sprites/Characters/Andrey/Andrey_surprise.png"
+		},
+		{
+			"name": "Andrey_withBag",
+			"path": "res://Sprites/Characters/Andrey/Andrey_withBag.png"
+		}
+	],
+	"scale": 60,
+	"theme": ""
+}
